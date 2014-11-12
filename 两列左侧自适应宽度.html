@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>两列左侧自适应宽度</title>
+
+	<style>
+		body{
+			margin: 0;
+			font-size: 14px;
+		}
+
+		.page-sidebar{
+			/* 修复固定左侧文档流 */
+			position: relative;
+			z-index: 1;
+			float: left;
+			width: 220px;
+			margin-right: -220px;
+			/*temp*/
+			height: 400px;
+			background-color: green;
+		}
+		.page-content{
+
+			float: right;
+			width: 100%;
+			/*temp*/
+			background-color: blue;
+			height: 400px;
+
+		}
+		.page-content-inner{
+			/* 让出固定宽度左侧的位置 */
+			margin-left: 220px;
+		}
+	</style>
+</head>
+<body>
+	<div class="page-sidebar">
+		左侧固定宽度
+	</div>
+	<div class="page-content">
+		<div class="page-content-inner">
+			右侧自适应宽度
+		</div>
+		
+	</div>
+</body>
+</html>
